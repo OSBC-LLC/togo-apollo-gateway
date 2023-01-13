@@ -1,0 +1,13 @@
+version: "3"
+services:
+  apollo-gateway:
+    image: gateway:latest
+    network_mode: bridge
+    container_name: gateway
+    build: .
+    env_file:
+      - .env
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
